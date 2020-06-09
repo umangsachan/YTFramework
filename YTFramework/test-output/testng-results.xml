@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="419587" started-at="2020-06-09T10:27:02Z" finished-at="2020-06-09T10:34:02Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="419587" started-at="2020-06-09T10:27:02Z" finished-at="2020-06-09T10:34:02Z">
+      <class name="org.ytframework.testscripts.TC01">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC01@5db45159]" name="browserlaunch" is-config="true" duration-ms="11323" started-at="2020-06-09T15:57:02Z" finished-at="2020-06-09T15:57:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase1()[pri:0, instance:org.ytframework.testscripts.TC01@5db45159]" name="testcase1" duration-ms="34421" started-at="2020-06-09T15:57:14Z" finished-at="2020-06-09T15:57:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC01@5db45159]" name="browserclose" is-config="true" duration-ms="7101" started-at="2020-06-09T15:57:48Z" finished-at="2020-06-09T15:57:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC01 -->
+      <class name="org.ytframework.testscripts.TC02">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC02@d83da2e]" name="browserlaunch" is-config="true" duration-ms="12249" started-at="2020-06-09T15:57:55Z" finished-at="2020-06-09T15:58:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase2()[pri:0, instance:org.ytframework.testscripts.TC02@d83da2e]" name="testcase2" duration-ms="37429" started-at="2020-06-09T15:58:07Z" finished-at="2020-06-09T15:58:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase2 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC02@d83da2e]" name="browserclose" is-config="true" duration-ms="7084" started-at="2020-06-09T15:58:45Z" finished-at="2020-06-09T15:58:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC02 -->
+      <class name="org.ytframework.testscripts.TC03">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC03@a4102b8]" name="browserlaunch" is-config="true" duration-ms="15473" started-at="2020-06-09T15:58:52Z" finished-at="2020-06-09T15:59:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase3()[pri:0, instance:org.ytframework.testscripts.TC03@a4102b8]" name="testcase3" duration-ms="40602" started-at="2020-06-09T15:59:07Z" finished-at="2020-06-09T15:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase3 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC03@a4102b8]" name="browserclose" is-config="true" duration-ms="7088" started-at="2020-06-09T15:59:48Z" finished-at="2020-06-09T15:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC03 -->
+      <class name="org.ytframework.testscripts.TC04">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC04@11dc3715]" name="browserlaunch" is-config="true" duration-ms="15344" started-at="2020-06-09T15:59:55Z" finished-at="2020-06-09T16:00:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase4()[pri:0, instance:org.ytframework.testscripts.TC04@11dc3715]" name="testcase4" duration-ms="35171" started-at="2020-06-09T16:00:11Z" finished-at="2020-06-09T16:00:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase4 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC04@11dc3715]" name="browserclose" is-config="true" duration-ms="7337" started-at="2020-06-09T16:00:46Z" finished-at="2020-06-09T16:00:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC04 -->
+      <class name="org.ytframework.testscripts.TC05">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC05@69930714]" name="browserlaunch" is-config="true" duration-ms="12600" started-at="2020-06-09T16:00:53Z" finished-at="2020-06-09T16:01:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase5()[pri:0, instance:org.ytframework.testscripts.TC05@69930714]" name="testcase5" duration-ms="40175" started-at="2020-06-09T16:01:06Z" finished-at="2020-06-09T16:01:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase5 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC05@69930714]" name="browserclose" is-config="true" duration-ms="7322" started-at="2020-06-09T16:01:46Z" finished-at="2020-06-09T16:01:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC05 -->
+      <class name="org.ytframework.testscripts.TC06">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC06@7a52f2a2]" name="browserlaunch" is-config="true" duration-ms="9628" started-at="2020-06-09T16:01:53Z" finished-at="2020-06-09T16:02:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase6()[pri:0, instance:org.ytframework.testscripts.TC06@7a52f2a2]" name="testcase6" duration-ms="39032" started-at="2020-06-09T16:02:03Z" finished-at="2020-06-09T16:02:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase6 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC06@7a52f2a2]" name="browserclose" is-config="true" duration-ms="7363" started-at="2020-06-09T16:02:42Z" finished-at="2020-06-09T16:02:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC06 -->
+      <class name="org.ytframework.testscripts.TC07">
+        <test-method status="PASS" signature="browserlaunch()[pri:0, instance:org.ytframework.testscripts.TC07@78047b92]" name="browserlaunch" is-config="true" duration-ms="12710" started-at="2020-06-09T16:02:49Z" finished-at="2020-06-09T16:03:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserlaunch -->
+        <test-method status="PASS" signature="testcase7()[pri:0, instance:org.ytframework.testscripts.TC07@78047b92]" name="testcase7" duration-ms="52759" started-at="2020-06-09T16:03:02Z" finished-at="2020-06-09T16:03:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase7 -->
+        <test-method status="PASS" signature="browserclose()[pri:0, instance:org.ytframework.testscripts.TC07@78047b92]" name="browserclose" is-config="true" duration-ms="7329" started-at="2020-06-09T16:03:55Z" finished-at="2020-06-09T16:04:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- org.ytframework.testscripts.TC07 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
