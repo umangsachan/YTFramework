@@ -13,11 +13,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.ytframework.base.Baseclass;
 
-public class TC06 
+public class TC06 extends Baseclass
 {
-	ChromeDriver driver;
-	@BeforeMethod
+	//ChromeDriver driver;
+	/*@BeforeMethod
 	public void browserlaunch() 
 	{
 		System.setProperty("webdriver.chrome.driver", "E:\\\\chromedriver_win32\\\\chromedriver.exe");
@@ -27,7 +28,7 @@ public class TC06
 		Window win=option.window();
 		win.maximize();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);	
-	}
+	}*/
 	
 	@Test
 	public void testcase6() throws InterruptedException
@@ -40,6 +41,7 @@ public class TC06
 		
 		WebElement email=driver.findElement(By.cssSelector("input[type='email']"));
 		email.sendKeys("nishantgoel0123");
+		Thread.sleep(3000);
 		
 		WebElement nextbutton1=driver.findElement(By.xpath("//*[@id='identifierNext']/span/span"));
 		nextbutton1.click();
@@ -75,12 +77,12 @@ public class TC06
 		}
 		ac.sendKeys(Keys.ENTER).perform();
 	}
-	@AfterMethod
+	/*@AfterMethod
 	public void browserclose() throws InterruptedException
 	{
 		driver.close();
 		Thread.sleep(5000);
-	}
+	}*/
 	
 
 }

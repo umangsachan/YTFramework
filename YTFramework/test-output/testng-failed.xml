@@ -3,13 +3,44 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
+      <class name="org.ytframework.testscripts.TC02">
+        <methods>
+          <include name="browserlaunch"/>
+          <include name="testcase2"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC02 -->
+      <class name="org.ytframework.testscripts.TC05">
+        <methods>
+          <include name="testcase5"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC05 -->
+      <class name="org.ytframework.testscripts.TC07">
+        <methods>
+          <include name="testcase7"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC07 -->
+      <class name="org.ytframework.testscripts.TC03">
+        <methods>
+          <include name="testcase3"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC03 -->
       <class name="org.ytframework.testscripts.TC01">
         <methods>
+          <include name="browserclose"/>
           <include name="testcase1"/>
           <include name="browserlaunch"/>
-          <include name="browserclose"/>
         </methods>
       </class> <!-- org.ytframework.testscripts.TC01 -->
+      <class name="org.ytframework.testscripts.TC04">
+        <methods>
+          <include name="testcase4"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC04 -->
+      <class name="org.ytframework.testscripts.TC06">
+        <methods>
+          <include name="testcase6"/>
+        </methods>
+      </class> <!-- org.ytframework.testscripts.TC06 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

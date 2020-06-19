@@ -1,23 +1,17 @@
 package org.ytframework.testscripts;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WebDriver.Options;
-import org.openqa.selenium.WebDriver.Window;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.ytframework.base.Baseclass;
 
-public class TC05 
+public class TC05 extends Baseclass
 {
-	ChromeDriver driver;
-	@BeforeMethod
+	//ChromeDriver driver;
+	/*@BeforeMethod
 	public void browserlaunch() 
 	{
 		System.setProperty("webdriver.chrome.driver", "E:\\\\chromedriver_win32\\\\chromedriver.exe");
@@ -27,32 +21,33 @@ public class TC05
 		Window win=option.window();
 		win.maximize();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);	
-	}
+	}*/
 	
 	@Test
 	public void testcase5() throws InterruptedException
 	{
-		WebElement signin=driver.findElement(By.cssSelector("paper-button[aria-label='Sign in']"));
+		WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
 		Thread.sleep(5000);
 		
 		driver.navigate().refresh();
 		
-		WebElement email=driver.findElement(By.cssSelector("input[type='email']"));
+		WebElement email=driver.findElement(By.cssSelector(pr.getProperty("email")));
 		email.sendKeys("nishantgoel0123");
+		Thread.sleep(3000);
 		
-		WebElement nextbutton1=driver.findElement(By.xpath("//*[@id='identifierNext']/span/span"));
+		WebElement nextbutton1=driver.findElement(By.xpath(pr.getProperty("nextbutton1")));
 		nextbutton1.click();
 		Thread.sleep(3000);
 		
-		WebElement password=driver.findElement(By.cssSelector("input[type='password']"));
+		WebElement password=driver.findElement(By.cssSelector(pr.getProperty("password")));
 		password.sendKeys("Nishant@123");
 		
-		WebElement nextbutton2=driver.findElement(By.xpath("//*[@id='passwordNext']/span/span"));
+		WebElement nextbutton2=driver.findElement(By.xpath(pr.getProperty("nextbutton2")));
 		nextbutton2.click();
 		Thread.sleep(5000);
 		
-		List<WebElement> videoplay=driver.findElements(By.id("video-title"));
+		List<WebElement> videoplay=driver.findElements(By.id(pr.getProperty("videoplay")));
 		for(WebElement video_play : videoplay)
 		{
 			video_play.click();
@@ -61,11 +56,11 @@ public class TC05
 		}
 		Thread.sleep(6000);
 		
-		WebElement like=driver.findElement(By.xpath("//button[contains(@aria-label,'like this video along with')]"));
+		WebElement like=driver.findElement(By.xpath(pr.getProperty("like")));
 		like.click();
 		Thread.sleep(3000);
 		
-		WebElement logoutbutton=driver.findElement(By.id("avatar-btn"));
+		WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
 		logoutbutton.click();
 		Thread.sleep(7000);
 		Actions ac=new Actions(driver);
@@ -75,12 +70,12 @@ public class TC05
 		}
 		ac.sendKeys(Keys.ENTER).perform();
 	}
-	@AfterMethod
+	/*@AfterMethod
 	public void browserclose() throws InterruptedException
 	{
 		driver.close();
 		Thread.sleep(5000);
-	}
+	}*/
 	
 
 }
