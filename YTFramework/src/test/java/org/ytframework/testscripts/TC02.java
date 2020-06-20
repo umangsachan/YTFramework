@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.ytframework.base.Baseclass;
+import org.ytframework.pages.Login;
+import org.ytframework.pages.Logout;
 
 public class TC02 extends Baseclass
 {
@@ -25,7 +27,7 @@ public class TC02 extends Baseclass
 	@Test
 	public void testcase2() throws InterruptedException
 	{
-		WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
+		/*WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
 		Thread.sleep(5000);
 		
@@ -44,13 +46,16 @@ public class TC02 extends Baseclass
 		
 		WebElement nextbutton2=driver.findElement(By.xpath(pr.getProperty("nextbutton2")));
 		nextbutton2.click();
-		Thread.sleep(5000);
+		Thread.sleep(5000); */
+		
+		Login login=new Login(driver, pr);
+		login.signin("developers4444", "unicode@123");
 		
 		WebElement subscription=driver.findElement(By.xpath(pr.getProperty("subscription")));
 		subscription.click();
 		Thread.sleep(5000);
 		
-		WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
+		/*WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
 		logoutbutton.click();
 		Thread.sleep(7000);
 		Actions ac=new Actions(driver);
@@ -58,7 +63,10 @@ public class TC02 extends Baseclass
 		{
 			ac.sendKeys(Keys.TAB).perform();
 		}
-		ac.sendKeys(Keys.ENTER).perform();
+		ac.sendKeys(Keys.ENTER).perform();  */
+		
+		Logout logout=new Logout(driver, pr);
+		logout.signout();
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException

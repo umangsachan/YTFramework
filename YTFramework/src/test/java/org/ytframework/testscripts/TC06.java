@@ -14,6 +14,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.ytframework.base.Baseclass;
+import org.ytframework.pages.Login;
+import org.ytframework.pages.Logout;
+import org.ytframework.pages.Video_Play;
 
 public class TC06 extends Baseclass
 {
@@ -33,7 +36,7 @@ public class TC06 extends Baseclass
 	@Test
 	public void testcase6() throws InterruptedException
 	{
-		WebElement signin=driver.findElement(By.cssSelector("paper-button[aria-label='Sign in']"));
+		/*WebElement signin=driver.findElement(By.cssSelector("paper-button[aria-label='Sign in']"));
 		signin.click();
 		Thread.sleep(5000);
 		
@@ -52,22 +55,28 @@ public class TC06 extends Baseclass
 		
 		WebElement nextbutton2=driver.findElement(By.xpath("//*[@id='passwordNext']/span/span"));
 		nextbutton2.click();
-		Thread.sleep(5000);
+		Thread.sleep(5000); */
 		
-		List<WebElement> videoplay=driver.findElements(By.id("video-title"));
+		Login login=new Login(driver, pr);
+		login.signin("developers4444", "unicode@123");
+		
+		/*List<WebElement> videoplay=driver.findElements(By.id("video-title"));
 		for(WebElement video_play : videoplay)
 		{
 			video_play.click();
 			System.out.println("Play video title is : "+video_play.getText());
 			break;
 		}
-		Thread.sleep(6000);
+		Thread.sleep(6000); */
+		
+		Video_Play videoPlay=new Video_Play(driver, pr);
+		videoPlay.videoplay();
 		
 		WebElement channel_subscribe=driver.findElement(By.xpath("//yt-formatted-string[text()='Subscribe']"));
 		channel_subscribe.click();
 		Thread.sleep(3000);
 		
-		WebElement logoutbutton=driver.findElement(By.id("avatar-btn"));
+		/*WebElement logoutbutton=driver.findElement(By.id("avatar-btn"));
 		logoutbutton.click();
 		Thread.sleep(7000);
 		Actions ac=new Actions(driver);
@@ -75,7 +84,10 @@ public class TC06 extends Baseclass
 		{
 			ac.sendKeys(Keys.TAB).perform();
 		}
-		ac.sendKeys(Keys.ENTER).perform();
+		ac.sendKeys(Keys.ENTER).perform(); */
+		
+		Logout logout=new Logout(driver, pr);
+		logout.signout();
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException
