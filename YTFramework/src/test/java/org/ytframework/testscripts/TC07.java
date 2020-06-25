@@ -1,5 +1,6 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,9 @@ import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
 import org.ytframework.pages.Video_Play;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC07 extends Baseclass
 {
@@ -28,7 +32,7 @@ public class TC07 extends Baseclass
 	}*/
 	
 	@Test
-	public void testcase7() throws InterruptedException
+	public void testcase7() throws InterruptedException, IOException
 	{
 		/* -----------------------------Added this code in org.ytframework.pages package---------------------------------------*/
 		
@@ -54,7 +58,9 @@ public class TC07 extends Baseclass
 		Thread.sleep(5000);  */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC07", "TC07 - Signin successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/*List<WebElement> videoplay=driver.findElements(By.id(pr.getProperty("videoplay")));
 		for(WebElement video_play : videoplay)
@@ -75,7 +81,6 @@ public class TC07 extends Baseclass
 		WebElement comment =driver.findElement(By.xpath(pr.getProperty("comment")));
 		comment.click();
 		Thread.sleep(3000);
-		
 		page_scroll.sendKeys(Keys.TAB).perform();
 		Thread.sleep(2000);
 		page_scroll.sendKeys("Awsome video.! I like it very much :-)").perform();
@@ -83,6 +88,8 @@ public class TC07 extends Baseclass
 		WebElement comment_post=driver.findElement(By.xpath(pr.getProperty("comment_post")));
 		comment_post.click();
 		Thread.sleep(3000);
+		LogCapture.logcap("TC07", "Video is played and added the comment in it");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/* -----------------------------Added this code in org.ytframework.pages package---------------------------------------*/
 		
@@ -100,6 +107,8 @@ public class TC07 extends Baseclass
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		LogCapture.logcap("TC07", "Signout successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException
 	{

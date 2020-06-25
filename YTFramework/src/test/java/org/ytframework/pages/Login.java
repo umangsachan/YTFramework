@@ -19,13 +19,14 @@ public class Login
 	{
 		WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		
 		driver.navigate().refresh();
+		Thread.sleep(2000);
 		
 		WebElement email=driver.findElement(By.cssSelector(pr.getProperty("email")));
 		email.sendKeys(username);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		WebElement nextbutton1=driver.findElement(By.xpath(pr.getProperty("nextbutton1")));
 		nextbutton1.click();

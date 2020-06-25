@@ -1,5 +1,6 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,6 +11,9 @@ import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
 import org.ytframework.pages.Video_Play;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC05 extends Baseclass
 {
@@ -27,7 +31,7 @@ public class TC05 extends Baseclass
 	}*/
 	
 	@Test
-	public void testcase5() throws InterruptedException
+	public void testcase5() throws InterruptedException, IOException
 	{
 		/* WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
@@ -51,7 +55,8 @@ public class TC05 extends Baseclass
 		Thread.sleep(5000); */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC05", "TC05 - signin is successfully");
 		
 		/*List<WebElement> videoplay=driver.findElements(By.id(pr.getProperty("videoplay")));
 		for(WebElement video_play : videoplay)
@@ -68,6 +73,8 @@ public class TC05 extends Baseclass
 		WebElement like=driver.findElement(By.xpath(pr.getProperty("like")));
 		like.click();
 		Thread.sleep(3000);
+		LogCapture.logcap("TC05", "Video played and also liked the video");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/*WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
 		logoutbutton.click();
@@ -81,6 +88,9 @@ public class TC05 extends Baseclass
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		LogCapture.logcap("TC05", "TC05 - Signout successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
+		
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException

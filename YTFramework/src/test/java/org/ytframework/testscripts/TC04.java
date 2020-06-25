@@ -1,13 +1,16 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC04 extends Baseclass
 {
@@ -25,7 +28,7 @@ public class TC04 extends Baseclass
 	}*/
 	
 	@Test
-	public void testcase4() throws InterruptedException
+	public void testcase4() throws InterruptedException, IOException
 	{
 		/*WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
@@ -49,11 +52,14 @@ public class TC04 extends Baseclass
 		Thread.sleep(5000); */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC04", "TC04 - Signin successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		WebElement library=driver.findElement(By.xpath(pr.getProperty("library")));
 		library.click();
 		Thread.sleep(5000);
+		LogCapture.logcap("TC04", "Library clicked successfully");
 		
 		/*WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
 		logoutbutton.click();
@@ -67,6 +73,7 @@ public class TC04 extends Baseclass
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException

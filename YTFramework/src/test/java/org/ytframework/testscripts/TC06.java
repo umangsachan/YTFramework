@@ -1,5 +1,6 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +18,9 @@ import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
 import org.ytframework.pages.Video_Play;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC06 extends Baseclass
 {
@@ -34,7 +38,7 @@ public class TC06 extends Baseclass
 	}*/
 	
 	@Test
-	public void testcase6() throws InterruptedException
+	public void testcase6() throws InterruptedException, IOException
 	{
 		/*WebElement signin=driver.findElement(By.cssSelector("paper-button[aria-label='Sign in']"));
 		signin.click();
@@ -58,7 +62,9 @@ public class TC06 extends Baseclass
 		Thread.sleep(5000); */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC06", "TC06 - Signin successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/*List<WebElement> videoplay=driver.findElements(By.id("video-title"));
 		for(WebElement video_play : videoplay)
@@ -75,6 +81,8 @@ public class TC06 extends Baseclass
 		WebElement channel_subscribe=driver.findElement(By.xpath("//yt-formatted-string[text()='Subscribe']"));
 		channel_subscribe.click();
 		Thread.sleep(3000);
+		LogCapture.logcap("TC06", "Video is played and subscribed the channel");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/*WebElement logoutbutton=driver.findElement(By.id("avatar-btn"));
 		logoutbutton.click();
@@ -88,6 +96,8 @@ public class TC06 extends Baseclass
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		LogCapture.logcap("TC06", "Signout successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException

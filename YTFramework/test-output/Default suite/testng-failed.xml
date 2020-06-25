@@ -5,9 +5,9 @@
     <classes>
       <class name="org.ytframework.testscripts.TC01">
         <methods>
+          <include name="browserclose"/>
           <include name="testcase1"/>
           <include name="browserlaunch"/>
-          <include name="browserclose"/>
         </methods>
       </class> <!-- org.ytframework.testscripts.TC01 -->
     </classes>

@@ -1,5 +1,7 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,9 @@ import org.testng.annotations.Test;
 import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC02 extends Baseclass
 {
@@ -25,7 +30,7 @@ public class TC02 extends Baseclass
 	}*/
 	
 	@Test
-	public void testcase2() throws InterruptedException
+	public void testcase2() throws InterruptedException, IOException
 	{
 		/*WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
@@ -49,9 +54,12 @@ public class TC02 extends Baseclass
 		Thread.sleep(5000); */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC02", "TC02 - Signin successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		WebElement subscription=driver.findElement(By.xpath(pr.getProperty("subscription")));
+		LogCapture.logcap("TC02", "Subscription clicked successfully");
 		subscription.click();
 		Thread.sleep(5000);
 		
@@ -67,6 +75,7 @@ public class TC02 extends Baseclass
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 	}
 	/*@AfterMethod
 	public void browserclose() throws InterruptedException

@@ -9,12 +9,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 public class Baseclass 
 {
 	public ChromeDriver driver;
 	public Properties pr;
+	//public ChromeOptions option;
+	//public DesiredCapabilities capa;
 	@BeforeMethod
 	public void browserlaunch() throws IOException 
 	{
@@ -23,6 +27,10 @@ public class Baseclass
 		FileInputStream fi=new FileInputStream(f);
 		pr=new Properties();
 		pr.load(fi);
+	    /*option = new ChromeOptions();
+		option.addArguments("--incognito");
+		capa = DesiredCapabilities.chrome();
+		capa.setCapability(ChromeOptions.CAPABILITY, option); */
 		driver=new ChromeDriver();
 		driver.get("https://www.youtube.com/");
 		Options option=driver.manage();

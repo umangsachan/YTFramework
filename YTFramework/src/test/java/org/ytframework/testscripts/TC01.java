@@ -1,13 +1,16 @@
 package org.ytframework.testscripts;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.ytframework.base.Baseclass;
 import org.ytframework.pages.Login;
 import org.ytframework.pages.Logout;
+import org.ytframework.utilities.DateCalendar;
+import org.ytframework.utilities.LogCapture;
+import org.ytframework.utilities.ScreenshotCapture;
 
 public class TC01 extends Baseclass
 {
@@ -24,7 +27,7 @@ public class TC01 extends Baseclass
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);	
 	}*/
 	@Test
-	public void testcase1() throws InterruptedException
+	public void testcase1() throws InterruptedException, IOException
 	{
 		/*WebElement signin=driver.findElement(By.cssSelector(pr.getProperty("signin")));
 		signin.click();
@@ -48,14 +51,20 @@ public class TC01 extends Baseclass
 		Thread.sleep(5000); */
 		
 		Login login=new Login(driver, pr);
-		login.signin("developers4444", "unicode@123");
+		login.signin("hellowworld@gmail.com", "hellow@007");
+		LogCapture.logcap("TC01", "TC01 - Signin successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		WebElement trending=driver.findElement(By.xpath(pr.getProperty("trending")));
 		trending.click();
 		Thread.sleep(5000);
+		LogCapture.logcap("TC01", "Trending clicked successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+ ".png");
 		
 		Logout logout=new Logout(driver, pr);
 		logout.signout();
+		LogCapture.logcap("TC01", "TC01 - Signout successfully");
+		ScreenshotCapture.screenshotcap(driver, "D:\\Screenshots" +DateCalendar.Date1()+".png");
 		
 		/*WebElement logoutbutton=driver.findElement(By.id(pr.getProperty("logoutbutton")));
 		logoutbutton.click();
